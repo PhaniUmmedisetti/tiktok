@@ -27,7 +27,7 @@ class AuthController extends GetxController {
   Future<String> _uploadToStorage(File image) async {
     Reference ref = firebaseStorage
         .ref()
-        .child('profilrPics')
+        .child('profilePics')
         .child(firebaseAuth.currentUser!.uid);
 
     print("ref: $ref");
