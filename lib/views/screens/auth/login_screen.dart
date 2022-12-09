@@ -48,6 +48,7 @@ class LoginScreen extends StatelessWidget {
                 controller: _passwordController,
                 icon: Icons.lock,
                 labelText: 'Password',
+                isObscure: true,
               ),
             ),
             const SizedBox(height: 30),
@@ -60,7 +61,8 @@ class LoginScreen extends StatelessWidget {
                     Radius.circular(5),
                   )),
               child: InkWell(
-                onTap: () {},
+                onTap: (() => authController.loginUser(
+                    _emailController.text, _passwordController.text)),
                 child: const Center(
                   child: Text(
                     'Login',
