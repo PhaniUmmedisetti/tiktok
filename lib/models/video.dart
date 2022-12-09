@@ -1,17 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Video {
-  String username;
-  String uid;
-  String id;
+  String? username;
+  String? uid;
+  String? id;
   List likes;
   int commentCount;
   int shareCount;
-  String songName;
-  String caption;
-  String videoUrl;
-  String profilePhoto;
-  String thumbnail;
+  String? songName;
+  String? caption;
+  String? videoUrl;
+  String? profilePhoto;
+  String? thumbnail;
 
   Video({
     required this.username,

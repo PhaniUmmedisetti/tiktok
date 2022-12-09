@@ -72,10 +72,12 @@ class _ConfirmScreenState extends State<ConfirmScreen> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: uploadVideoController.uploadVideo(
-                        _songController.text,
-                        _captionController.text,
-                        widget.videoPath),
+                    onPressed: () async {
+                      await uploadVideoController.uploadVideo(
+                          _songController.text,
+                          _captionController.text,
+                          widget.videoPath);
+                    },
                     child: const Text(
                       'Share!',
                       style: TextStyle(
